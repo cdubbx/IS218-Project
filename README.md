@@ -1,6 +1,5 @@
-# IS218-Project
 
-Signing Sheet: 
+
 
 | Date       | Day       | Signatures |
 |------------|-----------|------------|
@@ -15,3 +14,4 @@ Signing Sheet:
 | 2023-12-05 | Tuesday   |            |
 | 2023-12-07 | Thursday  |            |
 | 2023-12-12 | Tuesday   |            |
+
