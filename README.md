@@ -1,5 +1,5 @@
 # Project to-do 
-/attendance.md
-[a relative link](attendance.md)
+# Attendance
+[Click here to view attendance sheet!](attendance.md)
 
 
