@@ -36,11 +36,5 @@ Community Building: Etsy fosters a sense of community among buyers and sellers, 
 
 Our business:
 Archetype: Pioneer and Ruler
-We want to be a pioneer in e-commerce, offering a ruler-like dominance in providing quality products and services.
-
-Methods of Persuasion:
-Quality Assurance: We offer high-quality products and services, ensuring customers receive reliable and premium items.
-
-Exclusive Deals: We offer exclusive deals and promotions to attract and retain customers, creating a sense of exclusivity.
-
-User-Friendly Platform: We focus on providing a seamless and user-friendly online shopping experience to compete with the giants.
+We want to be a pioneer in e-commerce, offering a ruler-like dominance in providing quality products and services. Quality Assurance: We offer high-quality products and services, ensuring customers receive reliable and premium items. Exclusive Deals: We offer exclusive deals and promotions to attract and retain customers, creating a sense of exclusivity. User-Friendly Platform: We focus on providing a seamless and user-friendly online shopping experience to compete with the giants. 
+Our persona is "Olivia", who is a discerning explorer. She appreciates businesses that are pioneers in providing curated, premium products. The ruler-like dominance in quality assurance and exclusive deals appeals to her desire for reliability and a touch of exclusivity. Olivia is drawn to the platform's user-friendly interface, allowing her to effortlessly navigate and find products that match her unique taste. This is why we want to be a pioneer in e-commerce, offering a ruler-like dominance in providing quality products and services. 
