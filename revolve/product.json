@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "name": "Apple watch",
+        "description": "One of the best watches on the market",
+        "price": 359.99,
+        "category": "Electronics",
+        "image": "/images/apple_watch.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Xbox Series S Controller ",
+        "description": "Better than PS5 controller, the best controller on the market ",
+        "price": 39.99,
+        "category": "Electronics",
+        "image": "/images/xbox_controller.jpeg"
+      }, 
+      {
+        "id": 3,
+        "name": "Mini Fridge ",
+        "description": "The best budget fridge on the market",
+        "price": 390.99,
+        "category": "Electronics",
+        "image": "/images/miniFridge.jpeg"
+      },
+      {
+        "id": 4, 
+        "name": "Samsung TV",
+        "description": "65 inch TV, with very high resolution",
+        "price":400.00,
+        "category":"Electronics",
+        "image":"/images/tv_bestbuy.jpeg"
+      }
+]
