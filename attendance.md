@@ -11,6 +11,6 @@ Signing Sheet:
 | 2023-11-21 | Tuesday   | X X        |
 | 2023-11-28 | Tuesday   | X X         |
 | 2023-11-30 | Thursday  | X           |
-| 2023-12-05 | Tuesday   |            |
+| 2023-12-05 | Tuesday   | X           |
 | 2023-12-07 | Thursday  |            |
 | 2023-12-12 | Tuesday   |            |
