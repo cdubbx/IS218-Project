@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Box, HStack, Button, Text, VStack } from '@chakra-ui/react';
 import Image from "next/image";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import Link from "next/link";
 
 export default function HeroSlider(){
 
@@ -70,42 +71,36 @@ export default function HeroSlider(){
       
 
     return (
-        <Box ml={100} mt={40}>
+        <Box ml={250} mt={40}>
            <VStack>
 
            
            <HStack>
-             <HStack  bg={'#a29985  '} h={320} w={'auto'} >
+             <HStack  spacing = {100} h={320} w={'auto'} >
                     
-                    <VStack ml={40}>
-                           <Text color={'white'} as = {'h1'} w={200}  mr={-30}>
-                        We offer the best in class electronics 
+                    <VStack ml={40}  spacing={10} justify = {'center'} align = {'left'} >
+                           <Text color={'black'} fontStyle={'adorn-serif'} textAlign={'left'} fontSize={50} fontWeight={'bold'} w={350}>
+                       30% OFF ON YOUR FIRST ORDER!
                     </Text>
-
-                        <button style={{background:'#a18585d2d'}}>
-                          Buy now
-                        </button>
+                      
+                      <Link href={'/contact'}>
+                      <Button  p = {5} w={100} style = {{border:'none', alignSelf:'left', cursor:'pointer'}}>
+                      Sign Up
+                     </Button>
+                      </Link>
+                   
+                   
 
                     </VStack>
                     
                  
-                    <Image src={heroItems[counter].img} alt="hero img" width={600} height = {500} style = {{padding:0}}/> 
+                    <Image src={'/images/image.png'} alt="hero img" width={425} height = {250} style = {{padding:0}}/> 
 
             </HStack>
             
            </HStack>
 
-           <HStack justify={'space-between'}>
-                <Box onClick={()=> handleClicked('left')}>
-                    <IoIosArrowBack style = {{fontSize: 20}}/>
-                </Box>
-                <Box  onClick={()=> handleClicked('right')}>
-                <IoIosArrowForward style = {{fontSize: 20}}/>
-
-
-                </Box>
-
-            </HStack>
+           
            </VStack>
         </Box>
     )

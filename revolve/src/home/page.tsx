@@ -4,9 +4,10 @@ import { Stack, HStack, Text,InputGroup, InputRightElement, Input, InputLeftElem
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart, CiShoppingCart} from "react-icons/ci";
 import Link from 'next/link';
-import ClientLayout from './layouts/ClientLayout';
-import HeroSlider from './components/HeroSlider';
-import ProductSlide from './components/productSlide';
+import ClientLayout from '@/app/layouts/ClientLayout';
+import HeroSlider from '@/app/components/HeroSlider';
+import ProductSlide from '@/app/components/productSlide';
+
 
 
 
@@ -32,11 +33,7 @@ export default function page() {
 
       </HStack> 
 
-
-              <ProductSlide />
-
-    
-
+      <ProductSlide />
      </Stack>
      
 

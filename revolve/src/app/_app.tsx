@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import ClientLayout from './layouts/ClientLayout'
+import MailChimpLayout from './layouts/MailChimpLayout'
 
 export default function App(){
 
@@ -10,6 +11,8 @@ export default function App(){
 
         <ChakraProvider>
         <ClientLayout>
+            <MailChimpLayout>
+            </MailChimpLayout>
             
         </ClientLayout>
         

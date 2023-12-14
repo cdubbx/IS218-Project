@@ -17,7 +17,7 @@ export default function Product({product}:{product:Product}) { // passing an obj
   
   
     return (
-    <Stack w={200} spacing={2}>
+    <Stack w={200} spacing={2} align = {'center'} justify = {'center'}>
 
         <Box  p={10}>
                 <Image src={product.image} height={100} width={100} alt={product.description}/>
