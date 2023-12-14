@@ -19,3 +19,6 @@
 
 # Persona
 [Click here to view Persona!](persona.md)
+
+# Figma Design
+[Click here to view Figma Design!](figma_design.md)
