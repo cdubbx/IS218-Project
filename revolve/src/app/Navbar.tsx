@@ -1,7 +1,9 @@
+"use client"
 import React from 'react'
 import { Stack, HStack, Text,InputGroup, InputRightElement, Input, InputLeftElement, Box, Button, Icon} from '@chakra-ui/react';
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart, CiShoppingCart} from "react-icons/ci";
+import Link from 'next/link';
 
 
 
@@ -22,18 +24,18 @@ export default function Navbar() {
                         Revolve
                 </Text>
     
-                <HStack spacing={40}>
-                    <Text>
+                <HStack spacing={40} pr={20} >
+                    <Link style={{textDecoration:'none', cursor:'pointer', color:'black'}} href={'/'}>
                         Home 
-                    </Text>x
+                    </Link>
     
-                    <Text>
+                    <Link style={{textDecoration:'none', cursor:'pointer', color:'black'}} href={'/contact'}>
                         Contact 
-                    </Text>
+                    </Link>
     
-                    <Text>
+                    <Link style={{textDecoration:'none', cursor:'pointer', color:'black'}} href='/#' >
                         About 
-                    </Text>
+                    </Link>
     
                     <Text>
                         Products 

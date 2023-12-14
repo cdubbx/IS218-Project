@@ -11,7 +11,7 @@ export default function ProductSlide() {
     ]
  
     return (
-    <HStack  ml={100} align={'center'}>
+    <HStack mt = {50} ml={250} align={'center'}>
         {productsL.map((product:Product) =>  (
             <Product product = {product} key={product.id} />
         )

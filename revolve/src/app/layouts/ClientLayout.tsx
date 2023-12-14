@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from '../Navbar'
 import SideBar from '../components/Sidebar'
 import { HStack } from '@chakra-ui/react';
+import Footer from '../components/Footer';
 
 type ClientLayoutProps = {
     children: React.ReactNode;
@@ -14,13 +15,13 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     <div> 
 <Navbar />
 <HStack align={'center'}>
-    <SideBar />
+    {/* <SideBar /> */}
 
 
     {children}
 </HStack>
 
-
+<Footer />
     </div>
   )
 }
