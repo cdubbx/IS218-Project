@@ -52,3 +52,7 @@ test ('Mini Fridge product details button is present', async ({ page }) => {
     await page.getByText('The best budget fridge on the market').click();
 });
 
+test ('65 inch TV, with very high resolution product details button is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('65 inch TV, with very high resolution').click();
+});
