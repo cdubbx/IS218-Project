@@ -32,4 +32,7 @@ test('hero button is present', async ({ page }) => {
     await page.getByRole('button', { name: 'Sign Up' }).click();
 });
 
-
+test ('hero image is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByRole('img', { name: 'img' }).click();
+});
