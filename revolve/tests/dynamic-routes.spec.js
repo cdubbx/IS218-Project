@@ -81,3 +81,19 @@ test ('test that cookie banner present', async ({ page }) => {
     await page.goto(localhost);
     await page.getByText('Accept').click();
 });
+
+test ('test that Sign up for Emails text is present', async ({ page }) => {
+    await page.goto("http://localhost:3000/contact");
+    await page.getByText('Sign up for Emails').click();
+});
+
+test ('test that Sign up for Emails button is present', async ({ page }) => {
+    await page.goto("http://localhost:3000/contact");
+    await page.getByRole('button', { name: 'Sign Up' }).click();
+});
+
+test ('test that footer text is present on contact page', async ({ page }) => {
+    await page.goto("http://localhost:3000/contact");
+    await page.getByText('100 MLK BLVD').click();
+});
+
