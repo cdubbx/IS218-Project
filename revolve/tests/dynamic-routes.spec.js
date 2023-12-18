@@ -61,3 +61,23 @@ test ('test that footer text is present', async ({ page }) => {
     await page.goto(localhost);
     await page.getByText('Get 10% off your first purchase').click();
 });
+
+test ('test that Home in navbar is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('Home').click();
+});
+
+test ('test that Sign Up in navbar is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('Sign Up').click();
+});
+
+test ('test that About in navbar is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('About').click();
+});
+
+test ('test that cookie banner present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('Accept').click();
+});
