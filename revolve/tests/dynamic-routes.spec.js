@@ -101,3 +101,8 @@ test ('test that Our Story heading text is present on About page', async ({ page
     await page.goto("http://localhost:3000/about");
     await page.getByText('Our Story').click();
 });
+
+test ('test that Our Story body text is present on About page', async ({ page }) => {
+    await page.goto("http://localhost:3000/about");
+    await page.getByText('Launched in 2023').click();
+});
