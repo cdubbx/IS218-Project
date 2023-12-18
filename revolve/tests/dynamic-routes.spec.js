@@ -41,3 +41,8 @@ test('Apple Watch product details is present', async ({ page }) => {
     await page.goto(localhost);
     await page.getByText('One of the best watches on').click();
   });
+
+test ('Xbox Series S Controller product details button is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('Better than PS5 controller, the best controller on the market').click();
+});
