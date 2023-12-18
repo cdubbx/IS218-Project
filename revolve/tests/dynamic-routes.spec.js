@@ -56,3 +56,8 @@ test ('65 inch TV, with very high resolution product details button is present',
     await page.goto(localhost);
     await page.getByText('65 inch TV, with very high resolution').click();
 });
+
+test ('test that footer text is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('Get 10% off your first purchase').click();
+});
