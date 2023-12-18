@@ -36,3 +36,8 @@ test ('hero image is present', async ({ page }) => {
     await page.goto(localhost);
     await page.getByRole('img', { name: 'img' }).click();
 });
+
+test('Apple Watch product details is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('One of the best watches on').click();
+  });
