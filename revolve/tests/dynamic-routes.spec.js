@@ -46,3 +46,9 @@ test ('Xbox Series S Controller product details button is present', async ({ pag
     await page.goto(localhost);
     await page.getByText('Better than PS5 controller, the best controller on the market').click();
 });
+
+test ('Mini Fridge product details button is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('The best budget fridge on the market').click();
+});
+
