@@ -27,4 +27,9 @@ test("post contains post data", async ({ page }) => {
     await page.getByText('% OFF ON YOUR FIRST ORDER!').click();
   });
 
-  
+test('hero button is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByRole('button', { name: 'Sign Up' }).click();
+});
+
+
