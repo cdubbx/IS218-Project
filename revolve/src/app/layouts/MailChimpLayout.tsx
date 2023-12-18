@@ -9,7 +9,7 @@ type MailChimpLayoutProps = {
 
 export default function MailChimpLayout(props: MailChimpLayoutProps) {
   return (
-    <Stack mr={100} ml={100}>
+    <Stack>
       <Navbar />
 
       {props.children}

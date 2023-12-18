@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <HStack bg={'#a29985'} h={300}   mr={150} ml={150} justify={'center'} align={'flex-start'} mt = {"60px"}>
+    <HStack bg={'#1F393C'} h={300} spacing = {50}   mr={150} ml={150} justify={'center'} align={'flex-start'} mt = {"60px"}>
 
-    <VStack mt = {60} >
+    <VStack mt = {60} align={'flex-start'} >
 
     <Text color={'whitesmoke'} fontSize={'large'}>Exclusive</Text>
      
@@ -19,15 +19,15 @@ export default function Footer() {
 
     </VStack>
 
-    <VStack mt = {60}>
+    <VStack mt = {60} align={'flex-start'}>
 
 <Text  color={'whitesmoke'} >Support</Text>
 
 
-<VStack spacing={2} >
+<VStack spacing={2} align={'flex-start'}  >
     <Text   color={'whitesmoke'} fontSize={'smaller'}>100 MLK BLVD</Text>
 
-    <Text mt={-10}  color={'whitesmoke'} fontSize={'smaller'}>Newark, NJ</Text>
+    <Text  color={'whitesmoke'} fontSize={'smaller'}>Newark, NJ</Text>
 </VStack>
  
     
@@ -36,7 +36,7 @@ export default function Footer() {
     <Text  color={'whitesmoke'} fontSize={'x-small'}>ecommerce@gmail.com</Text>
 
 
-<Text mt={-1} color={'whitesmoke'} >+88015-888888-9999</Text>
+<Text mt={-1} color={'whitesmoke'} fontSize = {'x-small'} >+88015-888888-9999</Text>
 
 </VStack>
 

@@ -9,7 +9,7 @@ export async function POST(req) {
   const { email } = JSON.parse(requestBody);
 
 
-  console.log(email); // Now you should see the email being logged.
+  // console.log(email); // Now you should see the email being logged.
 
   if (!email) {
     // Use the NextResponse object to create a response
@@ -26,9 +26,9 @@ export async function POST(req) {
   const AUDIENCE_ID = process.env.NEXT_PUBLIC_AUDIENCEID;
 
 
-  console.log(process.env.NEXT_PUBLIC_APIKEY);
-  console.log(process.env.NEXT_PUBLIC_APISERVER)
-  console.log(process.env.NEXT_PUBLIC_AUDIENCEID)
+  // console.log(process.env.NEXT_PUBLIC_APIKEY);
+  // console.log(process.env.NEXT_PUBLIC_APISERVER)
+  // console.log(process.env.NEXT_PUBLIC_AUDIENCEID)
   const url = `https://${API_SERVER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
 
   const data = {

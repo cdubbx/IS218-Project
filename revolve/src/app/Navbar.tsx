@@ -16,9 +16,12 @@ export default function Navbar() {
     }    
     
     return (
-        <Stack mr={100} ml={100}>
-    
-        <HStack justifyContent={'space-between'} align={'center'}>
+        <Stack mt={-10}>
+    <HStack bg={'#1F393C'} w={'100vw'} p={2} pl = {20}>
+        <Text color='white'>E-Commerce WebPage</Text>
+    </HStack>
+    <Stack  mr={100} ml={100}>
+ <HStack justifyContent={'space-between'} align={'center'}>
         
                 <Text as={'h1'}>
                         Revolve
@@ -33,13 +36,11 @@ export default function Navbar() {
                         Contact 
                     </Link>
     
-                    <Link style={{textDecoration:'none', cursor:'pointer', color:'black'}} href='/#' >
+                    <Link style={{textDecoration:'none', cursor:'pointer', color:'black'}} href={'/about'} >
                         About 
                     </Link>
     
-                    <Text>
-                        Products 
-                    </Text>
+                   
                 </HStack>
 
             <HStack>
@@ -109,6 +110,8 @@ export default function Navbar() {
     
     
         </HStack>
+    </Stack>
+       
     
         </Stack>
       )

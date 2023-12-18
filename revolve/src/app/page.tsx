@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Stack, HStack, Text,InputGroup, InputRightElement, Input, InputLeftElement, Box, Button, Icon} from '@chakra-ui/react';
 import { IoIosSearch } from "react-icons/io";
 import { CiHeart, CiShoppingCart} from "react-icons/ci";
@@ -10,9 +10,42 @@ import ProductSlide from './components/productSlide';
 
 
 
+const CookieConsentBanner = ({ onConsent }: any) => {
+  return (
+      <HStack justify = {'center'} bg={'#D7EFEB'} mt = {40} w = {'100vw'} mb = {-20} align = {'center'} className="cookie-banner" spacing = {50}>
+          <Text>We use cookies for improving your experience.</Text>
+          <HStack>
+          <Button cursor = {'pointer'} color={'white'} borderRadius = {5}  p = {10} border = {'none'} bg = {'#0B6655'} onClick={() => onConsent(true)}>Accept</Button>
+          <Button cursor = {'pointer'}  color={'white'} p ={10} borderRadius = {5}  border = {'none'} bg = {'#0B6655'} onClick={() => onConsent(false)}>Decline</Button>
+            </HStack>
+
+       
+      </HStack>
+  );
+};
+
 
 export default function page() {
     
+  const [showBanner, setShowBanner] = useState(false);
+
+  useEffect(() => {
+      const consent = localStorage.getItem('cookieConsent');
+      console.log(consent);
+      
+      if (consent === null) {
+          setShowBanner(true);
+      }
+  }, []);
+
+  const handleConsent = (consent:any) => {
+      localStorage.setItem('cookieConsent', consent);
+      setShowBanner(false);
+      // Additional logic for handling consent
+  };
+
+
+
     function heartIcon(){
         // 2. Use the `as` prop
         return <Icon as={CiHeart} />
@@ -34,6 +67,9 @@ export default function page() {
 
 
               <ProductSlide />
+
+              {showBanner && <CookieConsentBanner onConsent={handleConsent} />}
+
 
     
 
