@@ -12,3 +12,14 @@ test("post contains post data", async ({ page }) => {
       await page.goto(localhost);
     }
   });
+
+  test("home page links go to page", async ({ page }) => {
+    await page.goto(localhost);
+    for (const li of await page.getByRole("listitem").getByRole("link").all()) {
+      await li.click();
+      await page.getByRole("link").last().click();
+      await expect(page).toHaveURL(localhost);
+    }
+  });
+
+  
