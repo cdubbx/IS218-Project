@@ -22,4 +22,9 @@ test("post contains post data", async ({ page }) => {
     }
   });
 
+  test('hero text is present', async ({ page }) => {
+    await page.goto(localhost);
+    await page.getByText('% OFF ON YOUR FIRST ORDER!').click();
+  });
+
   
