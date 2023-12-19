@@ -29,18 +29,19 @@ export default function RootLayout({
 
             />
 
-            <Script 
-            id="google-analytics-script" // Unique ID for this scrip
-            strategy="lazyOnload">
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                        page_path: window.location.pathname,
-                    });
-                `}
-            </Script>
+      <Script
+        id="google-analytics-script" // Unique ID for this script
+        strategy="lazyOnload"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
       <body className={inter.className}>{children}</body>
 
     </html>
