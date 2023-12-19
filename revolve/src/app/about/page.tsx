@@ -1,13 +1,10 @@
-
 "use client"
-
-
 import React from 'react'
 import ClientLayout from '../layouts/ClientLayout'
 import { HStack, Stack, Text, VStack, useMediaQuery } from '@chakra-ui/react'
 import Image from 'next/image'
 
-export default function page() {
+export default function Info() {
   
  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
  

@@ -26,9 +26,12 @@ export default function RootLayout({
       <Script
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+
             />
 
-            <Script strategy="lazyOnload">
+            <Script 
+            id="google-analytics-script" // Unique ID for this scrip
+            strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
