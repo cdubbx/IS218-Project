@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const localhost = "http://localhost:3000";
+const localhost = "https://is-218-project.vercel.app/";
 
 test("simple api endpoint", async ({ request }) => {
   const response = await request.get(`${localhost}/src/app/api/subscribe/route`);

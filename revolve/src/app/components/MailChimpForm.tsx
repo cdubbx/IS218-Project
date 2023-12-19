@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, HStack, VStack, Text, Divider, Input, Button, Stack, useToast} from '@chakra-ui/react'
+import { Box, HStack, VStack, Text, Divider, Input, Button, Stack, useToast, useMediaQuery} from '@chakra-ui/react'
 import { useForm, SubmitHandler } from "react-hook-form"
 import axios from 'axios'
 import React, { useState } from 'react'
@@ -15,6 +15,8 @@ export default function MailChimpForm() {
   const [email, setEmail] = useState('');
   const toast = useToast()
   const router = useRouter();
+  const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
 
         const handleSubmit = async (e:any) => {
 
@@ -58,8 +60,42 @@ export default function MailChimpForm() {
         };
       
     return (
-    
-    <Stack justify={'center'} align = 'center' spacing={10}>
+
+
+      <>
+      {!isLargerThan800 ? (
+
+<Stack ml = {-30} justify={'center'} align = 'center' spacing={10}>
+       
+
+        
+<form onSubmit={(handleSubmit)}>
+<VStack borderColor = {'gray'} p={50} spacing={20}>
+    <Text fontSize={27}>Sign up for Emails</Text>
+    <Input style={{border:'none', background:'#f0f0f0', padding:10}} w={'20rem'} placeSelf={'center'} placeholder='Your name'/>
+
+    <Input
+     value={email}
+     onChange={(e) => setEmail(e.target.value)}
+     style={{border:'none', background:'#f0f0f0', padding:10}}
+     w={'20rem'}
+     placeholder='Your email'
+/>
+    <Input style={{border:'none', background:'#f0f0f0', padding:10}}  w={'20rem'}  placeholder='Your phone' />
+
+<Button type='submit'>Sign Up</Button>  
+
+</VStack>
+</form>
+
+
+
+</Stack>
+
+
+
+      ) : (
+         <Stack justify={'center'} align = 'center' spacing={10}>
        
 
         
@@ -85,6 +121,11 @@ export default function MailChimpForm() {
             
       
     </Stack>
+      )}
+      
+      </>
+    
+   
 
 
   )

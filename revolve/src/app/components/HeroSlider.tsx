@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Box, HStack, Button, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Button, Text, VStack, useMediaQuery } from '@chakra-ui/react';
 import Image from "next/image";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
@@ -11,6 +11,8 @@ export default function HeroSlider(){
 
     const [clicked, setClicked] = useState({ left: false, right: false });
     const [counter, setCounter] = useState(0);
+    const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
+
   
     const isInitialMount = useRef(true);
 
@@ -71,12 +73,51 @@ export default function HeroSlider(){
       
 
     return (
-        <Box ml={250} mt={40}>
+        
+        
+        <>
+        
+        {!isLargerThan800 ? (
+        
+        
+        <VStack>
+
+<VStack  spacing = {100} h={320} w={'auto'} mb = {50} >
+                    
+                    <VStack ml={40}  spacing={10} justify = {'center'} align = {'left'} >
+                           <Text color={'black'} fontStyle={'adorn-serif'} textAlign={'left'} fontSize={40} fontWeight={'bold'} w={350}>
+                       30% OFF ON YOUR FIRST ORDER!
+                    </Text>
+                      
+                      <Link href={'/contact'}>
+                      <Button  p = {5} w={100} style = {{border:'none', alignSelf:'left', cursor:'pointer'}}>
+                      Sign Up
+                     </Button>
+                      </Link>
+                   
+                   
+
+                    </VStack>
+                    
+                 
+                    <Image src={'/images/image.png'} alt="hero img" width={425} height = {250} style = {{padding:0}}/> 
+
+            </VStack>
+
+
+          
+        </VStack>
+        
+        
+        
+        
+        
+        ) : ( <Box ml={{base:0, md:250}} mt={40}>
            <VStack>
 
            
            <HStack>
-             <HStack  spacing = {100} h={320} w={'auto'} >
+             <HStack ml={250}  spacing = {100} h={320} w={'auto'} >
                     
                     <VStack ml={40}  spacing={10} justify = {'center'} align = {'left'} >
                            <Text color={'black'} fontStyle={'adorn-serif'} textAlign={'left'} fontSize={50} fontWeight={'bold'} w={350}>
@@ -102,7 +143,11 @@ export default function HeroSlider(){
 
            
            </VStack>
-        </Box>
+        </Box>)}
+        
+        </>
+        
+       
     )
 
 

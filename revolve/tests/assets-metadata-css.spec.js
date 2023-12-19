@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const localhost = "http://localhost:3000";
+const localhost = "https://is-218-project.vercel.app/";
 
 test("Page title is correct", async ({ page }) => {
     await page.goto(localhost);

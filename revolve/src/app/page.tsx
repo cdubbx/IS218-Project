@@ -51,7 +51,7 @@ export default function page() {
       </HStack> 
 
 
-              <ProductSlide />
+         <ProductSlide />
 
 
     

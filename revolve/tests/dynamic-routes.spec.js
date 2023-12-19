@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const localhost = "http://localhost:3000";
+const localhost = "https://is-218-project.vercel.app/";
 
 test("post contains post data", async ({ page }) => {
     await page.goto(localhost);
@@ -83,31 +83,31 @@ test ('test that cookie banner present', async ({ page }) => {
 });
 
 test ('test that Sign up for Emails text is present', async ({ page }) => {
-    await page.goto("http://localhost:3000/contact");
+    await page.goto("https://is-218-project.vercel.app/contact");
     await page.getByText('Sign up for Emails').click();
 });
 
 test ('test that Sign up for Emails button is present', async ({ page }) => {
-    await page.goto("http://localhost:3000/contact");
+    await page.goto("https://is-218-project.vercel.app/contact");
     await page.getByRole('button', { name: 'Sign Up' }).click();
 });
 
 test ('test that footer text is present on contact page', async ({ page }) => {
-    await page.goto("http://localhost:3000/contact");
+    await page.goto("https://is-218-project.vercel.app/contact");
     await page.getByText('100 MLK BLVD').click();
 });
 
 test ('test that Our Story heading text is present on About page', async ({ page }) => {
-    await page.goto("http://localhost:3000/about");
+    await page.goto("https://is-218-project.vercel.app/about");
     await page.getByText('Our Story').click();
 });
 
 test ('test that Our Story body text is present on About page', async ({ page }) => {
-    await page.goto("http://localhost:3000/about");
+    await page.goto("https://is-218-project.vercel.app/about");
     await page.getByText('Launched in 2023').click();
 });
 
 test ('test that promo text is present on About page', async ({ page }) => {
-    await page.goto("http://localhost:3000/about");
+    await page.goto("https://is-218-project.vercel.app/about");
     await page.getByText('Fast and Free Delivery').click();
 });

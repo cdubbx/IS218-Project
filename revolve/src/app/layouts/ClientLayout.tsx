@@ -3,7 +3,7 @@
 import React from 'react'
 import Navbar from '../Navbar'
 import SideBar from '../components/Sidebar'
-import { HStack } from '@chakra-ui/react';
+import { HStack, Stack } from '@chakra-ui/react';
 import Footer from '../components/Footer';
 
 type ClientLayoutProps = {
@@ -12,7 +12,7 @@ type ClientLayoutProps = {
 
 export default function ClientLayout({ children }: ClientLayoutProps) {
   return (
-    <div> 
+    <Stack w={{base:'430px', md:'auto'}}> 
 <Navbar />
 <HStack align={'center'}>
     {/* <SideBar /> */}
@@ -22,6 +22,6 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
 </HStack>
 
 <Footer />
-    </div>
+    </Stack>
   )
 }
