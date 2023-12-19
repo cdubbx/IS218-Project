@@ -43,6 +43,9 @@ export async function POST(req) {
     },
   };
 
+  console.log(`API Key Available: ${!!process.env.APIKEY}`);
+
+
   try {
     const response = await axios.post(url, data, options);
     if (response.status >= 400) {
