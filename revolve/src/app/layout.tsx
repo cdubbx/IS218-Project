@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -20,17 +19,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    
-    
     <html lang="en">
       <Script
-                strategy="lazyOnload"
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-
-            />
+        id="google-tag-manager-script" // Unique ID for the external script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
 
       <Script
-        id="google-analytics-script" // Unique ID for this script
+        id="google-analytics-inline-script" // Unique ID for the inline script
         strategy="lazyOnload"
       >
         {`
@@ -43,16 +40,6 @@ export default function RootLayout({
         `}
       </Script>
       <body className={inter.className}>{children}</body>
-
     </html>
-
-
-    //  <Box>
-
-    //    <Navbar />
-    //    <SideBar />
-    //  </Box>
-  )
-
-
+  );
 }
