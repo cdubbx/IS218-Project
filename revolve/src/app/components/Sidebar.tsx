@@ -78,7 +78,8 @@ export default function SideBar() {
     onMouseLeave={() => handleMouseLeave('item1')}
     >
           <Text>
-        Women's Fashion
+          Women&apos;s Fashion
+
     </Text> 
     {hoverStates.item1 && <IoIosArrowForward />}
    
@@ -92,7 +93,8 @@ export default function SideBar() {
     onMouseLeave={() => handleMouseLeave('item2')}
     >
           <Text>
-        Men's Fashion
+          Men&apos;s Fashion
+
     </Text> 
     {hoverStates.item2 && <IoIosArrowForward />}
    

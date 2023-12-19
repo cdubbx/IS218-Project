@@ -21,7 +21,7 @@ export async function POST(req) {
     });
   }
 
-  const API_KEY = process.env.NEXT_PUBLIC_APIKEY ;
+  const API_KEY = process.env.APIKEY ;
   const API_SERVER = process.env.NEXT_PUBLIC_APISERVER;
   const AUDIENCE_ID = process.env.NEXT_PUBLIC_AUDIENCEID;
 

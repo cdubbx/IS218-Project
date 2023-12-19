@@ -42,15 +42,16 @@ export default function page() {
         <HStack mt = {50} ml = {100} spacing={70} >
             <VStack   align = {'flex-start'} w = {'30%'}>
                 <Text textAlign={'left'} fontSize = {40} fontWeight={'bold'}>Our Story</Text>
-                <Text fontSize={16} textAlign={'left'}>Launched in 2023, Revolve is North America's premier online shopping marketplace with an active presence in other countries. Supported by wide range of tailored marketing, data and service solutions, Revolve has many sellers and brands and serves thousands of customers across the region </Text>
-                <Text fontSize={16} textAlign={'left'}>Revolve has a variety of products to offer, growing at a very fast rate. Revolve offers a diverse assortment in categories</Text>
+                <Text fontSize={16} textAlign={'left'}>Launched in 2023, Revolve is North America&apos;s premier online shopping marketplace with an active presence in other countries. Supported by a wide range of tailored marketing, data, and service solutions, Revolve has many sellers and brands and serves thousands of customers across the region.</Text>
+                <Text fontSize={16} textAlign={'left'}>Revolve has a variety of products to offer, growing at a very fast rate. Revolve offers a diverse assortment in categories.</Text>
+
             </VStack>
 
             <Image src={'/images/bookimage.png'} height={400} width={600} alt='book-image' />
         </HStack>
         <HStack spacing = {50} mt = {50} align = {'center'} justify={'center'}>
             {servicesCard.map((card,index) => (
-            <VStack align={'center'} justify={'center'}>
+            <VStack align={'center'} key={index} justify={'center'}>
                 <Image src={card?.image} height={60} width={60} alt='desc' />
                 <Text fontWeight = {'bold'}>{card?.title}</Text>
                 <Text mt = {-10} fontSize = {12}>{card?.desc}</Text>

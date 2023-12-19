@@ -27,22 +27,7 @@ const CookieConsentBanner = ({ onConsent }: any) => {
 
 export default function page() {
     
-  const [showBanner, setShowBanner] = useState(false);
 
-  useEffect(() => {
-      const consent = localStorage.getItem('cookieConsent');
-      console.log(consent);
-      
-      if (consent === null) {
-          setShowBanner(true);
-      }
-  }, []);
-
-  const handleConsent = (consent:any) => {
-      localStorage.setItem('cookieConsent', consent);
-      setShowBanner(false);
-      // Additional logic for handling consent
-  };
 
 
 
@@ -67,8 +52,6 @@ export default function page() {
 
 
               <ProductSlide />
-
-              {showBanner && <CookieConsentBanner onConsent={handleConsent} />}
 
 
     
